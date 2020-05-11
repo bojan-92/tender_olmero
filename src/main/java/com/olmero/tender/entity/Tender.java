@@ -1,5 +1,7 @@
 package com.olmero.tender.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -25,8 +27,11 @@ public class Tender implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "issuer_id")
+	@JsonIgnore
+	@ToString.Exclude
 	private Issuer issuer;
 
 	@OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
+	@JsonIgnore
 	private List<Offer> offers = new ArrayList<>();
 }

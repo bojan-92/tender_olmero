@@ -3,8 +3,8 @@ CREATE DATABASE tender_olmero;
 CREATE TABLE tender_olmero.offers (
     id INT NOT NULL PRIMARY KEY auto_increment,
     isAccepted INT,
-    tender_id INT,
-    bidder_id INT
+    tender_id INT DEFAULT NULL ,
+    bidder_id INT DEFAULT NULL
 );
 
 CREATE TABLE tender_olmero.issuers (
@@ -28,3 +28,5 @@ INSERT INTO issuers (id, issuer_name) values (2, "issuer 2");
 
 INSERT INTO bidders (id, bidder_name) values (1, "bidder 1");
 INSERT INTO bidders (id, bidder_name) values (2, "bidder 2");
+
+INSERT INTO tenders (id, work_description, issuer_id) values (1, "Work description 1", 1);
