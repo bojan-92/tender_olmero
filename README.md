@@ -14,6 +14,7 @@ There are several ways to run a Spring Boot application on your local machine. O
  - Download the zip or clone the Git repository.
  - Unzip the zip file (if you downloaded one)
  - Execute resources/propagate.sql script
+ - Be sure that you have Lombok plugin installed in your IDE
  - Open Intellj -> choose to open project -> right click on pom.xml -> Maven -> Generate Sources and Update Folders
  - Choose the TenderApplication class (search for @SpringBootApplication)
  - Click 'TenderApplication' nest to the class signature
