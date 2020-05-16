@@ -3,6 +3,7 @@ package com.olmero.tender.controller;
 import com.olmero.tender.entity.*;
 import com.olmero.tender.exception.OfferAlreadySubmittedException;
 import com.olmero.tender.exception.ResourceNotFoundException;
+import com.olmero.tender.exception.RequestNotValidException;
 import com.olmero.tender.service.BidderService;
 import com.olmero.tender.service.IssuerService;
 import com.olmero.tender.service.OfferService;
@@ -96,6 +97,9 @@ public class TenderController {
 			throw new ResourceNotFoundException("Issuer with id - " + tenderRequest.getIssuerId());
 		}
 		Tender tender = new Tender();
+		if (tenderRequest.getWorkDescription() == null) {
+			throw new RequestNotValidException("Work description can not be null");
+		}
 		tender.setWorkDescription(tenderRequest.getWorkDescription());
 		tender.setIssuer(issuer);
 		tenderService.save(tender);
@@ -113,8 +117,12 @@ public class TenderController {
 		if (tender == null) {
 			throw new ResourceNotFoundException("Tender with id - " + offerRequest.getTenderId());
 		}
+		if (offerRequest.getPrice() == null) {
+			throw new RequestNotValidException("Offer price can not be null");
+		}
 		Offer offer = new Offer();
 		offer.setBidder(bidder);
+		offer.setPrice(offerRequest.getPrice());
 		offer.setStatus(OfferStatus.NON_SUBMITTED);
 		offer.setTender(tender);
 		offerService.save(offer);
@@ -135,6 +143,15 @@ public class TenderController {
 			throw new OfferAlreadySubmittedException("Tender - " + tenderId + " already has submitted offer.");
 		}
 		Offer offer = offerService.findById(offerId);
+
+		if(offer == null){
+			throw new ResourceNotFoundException("Offer with id - " + tenderId);
+		}
+
+		if(offer.getStatus().equals(OfferStatus.SUBMITTED)){
+			throw new OfferAlreadySubmittedException("Offer - " + offerId + " is already submitted.");
+		}
+
 		if (!offer.getTender().getId().equals(tenderId)) {
 			throw new ResourceNotFoundException("Offer with id - " + offerId + " doesn't exist for Tender with id - " + tenderId);
 		}

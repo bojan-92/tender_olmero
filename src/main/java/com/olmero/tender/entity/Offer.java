@@ -2,7 +2,6 @@ package com.olmero.tender.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,8 +21,11 @@ public class Offer implements Serializable {
 	private Long id;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "status")
+	@Column(name = "status", nullable = false)
 	private OfferStatus status;
+
+	@Column(name = "price", nullable = false)
+	private Long price;
 
 	@ManyToOne
 	@JoinColumn(name = "tender_id")

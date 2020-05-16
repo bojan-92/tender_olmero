@@ -22,7 +22,7 @@ public class Tender implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "work_description")
+	@Column(name = "work_description", nullable = false)
 	private String workDescription;
 
 	@ManyToOne

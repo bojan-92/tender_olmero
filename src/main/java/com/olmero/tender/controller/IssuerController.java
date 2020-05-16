@@ -5,10 +5,7 @@ import com.olmero.tender.service.IssuerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("issuer")
@@ -18,9 +15,9 @@ public class IssuerController {
 	private IssuerService issuerService;
 
 	@PostMapping
-	public ResponseEntity create(@RequestParam String name){
+	public ResponseEntity create(@RequestBody CreateIssuerRequest request){
 		Issuer issuer = new Issuer();
-		issuer.setIssuerName(name);
+		issuer.setIssuerName(request.getIssuerName());
 		issuerService.save(issuer);
 		return new ResponseEntity(HttpStatus.CREATED);
 	}

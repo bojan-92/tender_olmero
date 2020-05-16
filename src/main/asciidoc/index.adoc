@@ -1,0 +1,222 @@
+= GET Requests
+
+== Get Tender By Id
+Obtains a specific tenders by its unique identifier.
+
+==== Sample Request
+include::{snippets}/tender/get-tender-by-id/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/get-tender-by-id/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/get-tender-by-id/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/get-tender-by-id/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/get-tender-by-id/response-body.adoc[]
+
+== Get Tenders For Issuer
+Obtains a tenders for issuer by its unique identifier.
+
+==== Sample Request
+include::{snippets}/tender/get-tenders-for-issuer/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/get-tenders-for-issuer/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/get-tenders-for-issuer/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/get-tenders-for-issuer/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/get-tenders-for-issuer/response-body.adoc[]
+
+
+== Get Offer By Id
+Obtains a specific offers by its unique identifier.
+
+==== Sample Request
+include::{snippets}/tender/offer/get-offer-by-id/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/get-offer-by-id/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/get-offer-by-id/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/offer/get-offer-by-id/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/offer/get-offer-by-id/response-body.adoc[]
+
+== Get Tender Offers By Id
+Obtains a specific tender offers by its unique identifier.
+
+==== Sample Request
+include::{snippets}/tender/offer/get-tender-offers-by-id/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/get-tender-offers-by-id/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/get-tender-offers-by-id/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/offer/get-tender-offers-by-id/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/offer/get-tender-offers-by-id/response-body.adoc[]
+
+== Get Tender Offers Submitted By Bidder
+Obtains a tender offers submitted by bidder.
+
+==== Sample Request
+include::{snippets}/tender/offer/get-tender-offers-submitted-by-bidder/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/get-tender-offers-submitted-by-bidder/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/get-tender-offers-submitted-by-bidder/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/offer/get-tender-offers-submitted-by-bidder/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/offer/get-tender-offers-submitted-by-bidder/response-body.adoc[]
+
+== Get Specific Tender Offers Submitted By Bidder
+Obtains a specific tender offers submitted by bidder.
+
+==== Sample Request
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/path-parameters.adoc[]
+
+==== Request Parameters
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/request-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/offer/get-specific-tender-offers-submitted-by-bidder/response-body.adoc[]
+
+= POST requests
+
+== Create Tender
+Create tender.
+
+==== Sample Request
+include::{snippets}/tender/create-tender/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/create-tender/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/create-tender/curl-request.adoc[]
+
+==== Request Fields
+include::{snippets}/tender/create-tender/request-fields.adoc[]
+
+==== Request Body
+include::{snippets}/tender/create-tender/request-body.adoc[]
+
+==== Response Body
+include::{snippets}/tender/create-tender/response-body.adoc[]
+
+== Create Offer
+Create offer.
+
+==== Sample Request
+include::{snippets}/tender/offer/create-offer/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/create-offer/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/create-offer/curl-request.adoc[]
+
+==== Request Fields
+include::{snippets}/tender/offer/create-offer/request-fields.adoc[]
+
+==== Request Body
+include::{snippets}/tender/offer/create-offer/request-body.adoc[]
+
+==== Response Fields
+include::{snippets}/tender/offer/create-offer/response-body.adoc[]
+
+== Create Issuer
+Create issuer.
+
+==== Sample Request
+include::{snippets}/issuer/create-issuer/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/issuer/create-issuer/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/issuer/create-issuer/curl-request.adoc[]
+
+==== Request Fields
+include::{snippets}/issuer/create-issuer/request-fields.adoc[]
+
+==== Request Body
+include::{snippets}/issuer/create-issuer/request-body.adoc[]
+
+==== Response Body
+include::{snippets}/issuer/create-issuer/response-body.adoc[]
+
+== Create Bidder
+Create bidder.
+
+==== Sample Request
+include::{snippets}/bidder/create-bidder/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/bidder/create-bidder/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/bidder/create-bidder/curl-request.adoc[]
+
+==== Request Fields
+include::{snippets}/bidder/create-bidder/request-fields.adoc[]
+
+==== Request Body
+include::{snippets}/bidder/create-bidder/request-body.adoc[]
+
+==== Response Body
+include::{snippets}/bidder/create-bidder/response-body.adoc[]
+
+= PUT requests
+
+== Submit Offer
+Submit offer.
+
+==== Sample Request
+include::{snippets}/tender/offer/submit-offer/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/tender/offer/submit-offer/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/tender/offer/submit-offer/curl-request.adoc[]
+
+==== Path Parameters
+include::{snippets}/tender/offer/submit-offer/path-parameters.adoc[]
+
+==== Request Body
+include::{snippets}/tender/offer/submit-offer/request-body.adoc[]
+
+==== Response Body
+include::{snippets}/tender/offer/submit-offer/response-body.adoc[]
