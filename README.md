@@ -13,6 +13,7 @@
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the  com.olmero.tender.TenderApplication class from your IDE.
  - Download the zip or clone the Git repository.
  - Unzip the zip file (if you downloaded one)
+ - Change your MySql dbb properties in application.properties file
  - Execute resources/propagate.sql script
  - Be sure that you have Lombok plugin installed in your IDE
  - Open Intellj -> choose to open project -> right click on pom.xml -> Maven -> Generate Sources and Update Folders
