@@ -2,7 +2,7 @@ CREATE DATABASE tender_olmero;
 
 CREATE TABLE tender_olmero.offers (
     id INT NOT NULL PRIMARY KEY auto_increment,
-    isAccepted INT,
+    status VARCHAR (50),
     tender_id INT DEFAULT NULL ,
     bidder_id INT DEFAULT NULL
 );

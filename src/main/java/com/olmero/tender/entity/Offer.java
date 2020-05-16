@@ -21,8 +21,9 @@ public class Offer implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "isAccepted")
-	private Boolean isAccepted;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status")
+	private OfferStatus status;
 
 	@ManyToOne
 	@JoinColumn(name = "tender_id")

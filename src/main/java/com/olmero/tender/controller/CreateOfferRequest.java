@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CreateTenderRequest {
+public class CreateOfferRequest {
 
-	private String workDescription;
-	private Long issuerId;
+	private Long bidderId;
+	private Long tenderId;
 }
