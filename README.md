@@ -13,5 +13,11 @@
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the main method in the  com.olmero.tender.TenderApplication class from your IDE.
  - Download the zip or clone the Git repository.
  - Unzip the zip file (if you downloaded one)
- - Open Command Prompt and Change directory (cd) to folder containing pom.xml
- - Open Intellj -> choose to open project
+ - Execute resources/propagate.sql script
+ - Open Intellj -> choose to open project -> right click on pom.xml -> Maven -> Generate Sources and Update Folders
+ - Choose the TenderApplication class (search for @SpringBootApplication)
+ - Click 'TenderApplication' nest to the class signature
+Alternatively you can use the Spring Boot Maven plugin like so:
+ `mvn spring-boot:run`
+
+
